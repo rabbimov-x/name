@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,4 +14,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --cl-red: #d10024;
+  --cl-dark: #15161d;
+  --cl-shop: #e4e7ed;
+  --cl-balck: #000000;
+  --cl-white: #ffffff;
+  --cl-navlink: #2b2d42; /* navlikga va qora rangli so'zlarga ishlatamiz rangi */
+  --cl-dark-p: #333; /* navlikdan to'qroq ranglar uchun ishlatamiz rangi */
+  --cl-dark-grey: #1e1f29; /* footer bl navbarbi bg siga oshlatamiz rangi */
+  --cl-line: #e4e7ed; /* chiziqlar va borderlarni rangi */
+  --cl-grey-p: #8d99ae; /* oddiy kulrang titilelarga p ni rangi */
+  --cl-bg-addcard: #1e1f29; /* footerning p ni rangi */
+  --cl-footer-p: #b9babc; /* footerning p ni rangi */
+  /* ============  FONT SIZE  =============== */
+  --size10: 10px;
+  --size12: 12px;
+  --size14: 14px;
+  --size16: 16px;
+  --size18: 18px;
+  --size20: 20px;
+  --size24: 24px;
+  --size30: 30px;
+  /* =============  ICONS width============== */
+  --icon-w18: 18px;
+  --icon-w14: 14px;
+  --icon-w12: 12px;
+  /* ============= MARGIN vs PADDING PX  ================ */
+  --mp30: 30px;
+  --mp15: 15px;
+  --mp10: 10px;
+  --mp5: 5px;
+
+  /* ========== FONT FAMILY ============= */
+  --font-family: '"Montserrat-Extra-light", sans-serif';
+  --font-familyR: "Montserrat-Regular", sans-serif;
+  --font-familyS: "Montserrat-Semi-bold", sans-serif;
 }
