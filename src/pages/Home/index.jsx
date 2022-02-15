@@ -1,20 +1,19 @@
 import React from "react";
+import Footer from "../../components/Footer";
 // import ShopCard from "../../components/ShopCard"
-import ProductCard from "../../components/ProductCard"
+// import ProductCard from "../../components/ProductCard"
+import SmoleCard from "../../components/SmoleCard";
 
 import {Col3, Container} from "../../GlobalStyle"
 
 const Home = ()=>{
     return(
         <div>
-            <Container>
-                <Col3>
-                    <ProductCard/>
-                </Col3>
-            </Container>
+            <Footer>
+                
+            </Footer>
 
         </div>
-    )
+     )
 }
-
 export default Home;
