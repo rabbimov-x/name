@@ -6,7 +6,7 @@ export const shopCard = [
     {id: 1, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/laptop.webp'},
     {id: 2, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/camera.webp'},
     {id: 3, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/naushnik.webp'},
-    {id: 4, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/camera  .webp'},
+    {id: 4, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/camera.webp'},
     {id: 5, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/laptop.webp'},
     {id: 6, title: 'Laptop Collection', shop: 'Shop now ', imgUrl: './assets/images/png/xshop.webp'},
 ]
