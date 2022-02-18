@@ -118,9 +118,27 @@ export const  GlobalStyle = createGlobalStyle`
 
 
 `
+export const H1 = styled.h1`
+
+font-family: var(--font-familyS);
+font-size : ${({size})=>size ? size : "22px"};
+font-weight: ${({bold})=>bold? bold : "700"};
+padding: ${({pd})=>pd? pd : "0"};
+margin: ${({mr})=>mr? mr : "0"};
+color : ${({color})=>color ? color : "var(--cl-navlink)"};
+text-transform: uppercase;
+`
+export const P = styled(H1)`
+font-family: var(--font-familyR);
+font-weight: 500;
+font-size : ${({size})=>size ? size : "14px"};
+text-transform: none;
+`
 
 export const Container = styled.div`
 display: flex;
+flex-direction: ${({flex})=> flex? "column" : "none"};
+flex-wrap: ${({nowrap})=> nowrap? "nowrap" : "wrap"};
 justify-content: ${({justify})=>justify? justify: "left" };
 align-items: ${({align})=>align? "center": "" };
 padding: ${({pd})=>pd? pd : "0"} 5%;
@@ -131,7 +149,7 @@ export const Col12 = styled.div`
       justify-content: ${({justify})=>justify? justify : "block"};
       align-items: ${({align})=>align? align : "block"};
       box-sizing: border-box;
-      padding: ${({pd})=>pd? pd : "0"} var(--mp15);
+      padding: ${({pd})=>pd? pd : "0 var(--mp15)"} ;
 `
 export const Col10 = styled(Col12)`
     width: 83.333%;
@@ -149,7 +167,7 @@ export const Col3  = styled(Col12)`
     width: 25%;
 `
 export const Div = styled.div`
-display: ${({display})=>display ? display : "blok"};
+display: ${({display})=>display ? display : "block"};
 justify-content: ${({justify})=>justify ? justify : "left"};
 align-items: ${({align})=>align ? align : "left"};
 flex-direction: ${({flex})=>flex ? flex : "left"};
@@ -165,10 +183,11 @@ text-decoration: none;
 color: var(--cl-white);
 font-family: var(--font-familyR);
 font-size: var(--size12);
+font-weight: ${({bold})=> bold ? "600" : "500"};
 display: flex;
 align-items: center;
 margin: ${({mr})=>mr? mr : "0 5px"};
-color: var(--cl-white);
+color: ${({color})=> color ? color : "var(--cl-white)"};
 
 &:hover{
     color: var(--cl-red);
@@ -184,7 +203,7 @@ const common = css`
 width: ${({w})=>w? w : `var(--icon-w12)`};
 height: auto;
 margin: ${({mr})=>mr? mr : "0"};
-
+display: ${({display})=>display? display : "bloke" };
 
  & path{
      fill: ${({color})=>color ? color : `var(--cl-white)`};
