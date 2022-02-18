@@ -2,7 +2,8 @@ import React from "react";
 import { Div, Icon } from "../../GlobalStyle"
 import {ProductSyled, Product} from "./styled"
 
-const ProductCard = ()=>{
+const ProductCard = (props)=>{
+    // console.log(props)
     return(
         <ProductSyled>
             <Product.Img>
@@ -17,7 +18,7 @@ const ProductCard = ()=>{
             <Div>
             <Product.Body>
                 <Product.P>
-                   Category
+                   {props.title}
                 </Product.P>
                 <Product.A>
                 product name goes here

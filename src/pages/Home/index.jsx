@@ -11,7 +11,6 @@ import { useSelector  } from "react-redux";
 const Home = ()=>{
 
     const state = useSelector ((state)=>state.home)
-    console.log(state)
     return(
         <HomeStyle>
           <Container pd = "50px">
@@ -19,7 +18,7 @@ const Home = ()=>{
               state.shopCard.slice(-3).map(( value )=>{
                 return(
                   <Col4 key = {value.id}>
-                    <ShopCard data = {value} />
+                    <ShopCard data={value} />
                   </Col4>
                 )
               })
@@ -60,7 +59,7 @@ const Home = ()=>{
                state.productCard.slice(-4).map((value)=>{
                  return(
                    <Col3 key = {value.id}>
-                      <ProductCard>
+                      <ProductCard data = {value}>
                       </ProductCard>
                    </Col3>
                  )

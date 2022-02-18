@@ -4,7 +4,8 @@ import {Icon} from "../../GlobalStyle"
 
 
 
-const ShopCard = ()=>{
+const ShopCard = ({data})=>{
+    console.log(data)
     return(
         <ShopStyled>
             <ShopTitle>
@@ -14,7 +15,7 @@ const ShopCard = ()=>{
                     <Icon.Next w = "var(--icon-w18)" mr = "0 0 0 5px"></Icon.Next>
                 </a>
             </ShopTitle>
-            <CardImg src = "./assets/images/png/xshop.webp" alt="error"  />
+            <CardImg src = {data.imgUrl} alt="error"  />
             
         </ShopStyled>
     )
