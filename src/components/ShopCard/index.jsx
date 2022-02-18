@@ -5,7 +5,7 @@ import {Icon} from "../../GlobalStyle"
 
 
 const ShopCard = ({data})=>{
-    console.log(data)
+    // console.log(data)
     return(
         <ShopStyled>
             <ShopTitle>

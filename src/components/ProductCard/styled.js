@@ -71,14 +71,15 @@ transition: all 0.3s linear;
 `
 
 Product.Img = styled.div`
-
+display: flex;
+align-items: center;
+justify-content: center;
 width: 100%;
 height: calc(100vw/5);
 background-color: var(--cl-white);
 box-sizing: border-box;
 &> img{
     width: 100%;
-    height: 100%;
 }
 `
 Product.Body = styled.div`

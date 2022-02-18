@@ -3,11 +3,11 @@ import { Div, Icon } from "../../GlobalStyle"
 import {ProductSyled, Product} from "./styled"
 
 const ProductCard = (props)=>{
-    // console.log(props)
+    // console.log(props.data.imgUrl)
     return(
         <ProductSyled>
             <Product.Img>
-                <img src="./assets/images/png/xshop.webp" alt="error" />
+                <img src={props.data.imgUrl} alt="error" />
             </Product.Img>
             
             <Product.Footer className = "footer">

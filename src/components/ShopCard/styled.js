@@ -44,6 +44,7 @@ position: relative;
 export const ShopTitle = styled.div`
     position: absolute;
     top: 0;
+    left: 0;
     width: 75%;
     padding: 30px;
     z-index: 10;

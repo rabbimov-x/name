@@ -138,7 +138,7 @@ const Home = ()=>{
                state.productCard.slice(-4).map((value)=>{
                  return(
                    <Col3 key = {value.id}>
-                      <ProductCard>
+                      <ProductCard data = {value}>
                       </ProductCard>
                    </Col3>
                  )
@@ -156,7 +156,7 @@ const Home = ()=>{
                       {
                state.SmoleCard.slice(-3).map((value)=>{
                  return(
-                   <SmoleCard key = {value.id} >
+                   <SmoleCard key = {value.id} data = {value} >
                       
                    </SmoleCard>
                  )
