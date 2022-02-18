@@ -19,14 +19,16 @@ export const Nav = styled.div`
 `
 
 export const Ul = styled.ul`
+    width: 100%;
     display:  flex;
     align-items: center;
     list-style: none;
     margin: 0;
+    padding: 0;
 `
 Ul.Li = styled.li`
     padding: 20px 0px;
-    margin-left: 30px;
+    margin-left: ${({mr})=>mr? mr : "30px"};
     color: #2B2D42;
     background-color: transparent;
     >a{

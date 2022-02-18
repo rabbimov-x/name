@@ -3,16 +3,17 @@ import styled from "styled-components";
 
 
 export const ProductSyled = styled.div`
-width: 100%;
+width: 99%;
 height: auto;
-box-shadow: 0px 0px 0px 0px #e4e7ed, 0px 0px 0px 1px #e4e7ed;
 border: 1px solid var(--cl-line);
+box-shadow: 0 0 0 0 #e4e7ed, 0 0 0 1px #e4e7ed;
 background-color: var(--cl-white);
 position: relative;
 transition: all 0.3s linear;
+margin: 15px 0  ;
 
 &:hover{
-    border: 2px solid var(--cl-red);
+    border: 1px solid var(--cl-red);
     border-bottom: none;
 
 
@@ -29,7 +30,7 @@ Product.Footer = styled.div`
 position: absolute;
 bottom: 0;
 left: 0;
-z-index: -1;
+z-index: 0;
 width: 100%;
 height: auto;
 padding: var(--mp15);
@@ -83,7 +84,7 @@ box-sizing: border-box;
 Product.Body = styled.div`
 width: 100%;
 height: auto;
-z-index: 3;
+z-index: 4;
 background-color: var(--cl-white);
 padding: 15px;
 display:  flex;

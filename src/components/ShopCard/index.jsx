@@ -8,8 +8,7 @@ const ShopCard = ()=>{
     return(
         <ShopStyled>
             <ShopTitle>
-                <h1>Laptop</h1>
-                <h1>Collection</h1>
+                <h1>Laptop Collection</h1>
                 <a href="/shop_now">
                     SHOP NOW 
                     <Icon.Next w = "var(--icon-w18)" mr = "0 0 0 5px"></Icon.Next>

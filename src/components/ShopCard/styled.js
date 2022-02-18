@@ -41,6 +41,7 @@ export const ShopTitle = styled.div`
     z-index: 10;
 
     & > h1{
+        width: 70%;
         font-size: var(--size24);
         font-family: var(--font-familyS);
         color: var(--cl-white);

@@ -8,6 +8,13 @@ const ProductCard = ()=>{
             <Product.Img>
                 <img src="./assets/images/png/xshop.webp" alt="error" />
             </Product.Img>
+            
+            <Product.Footer className = "footer">
+                <button className="add-to-cart-btn" type = "button">
+                    <Icon.Cart color = "var(--cl-red)" w= "var(--icon-w18)" className = "AddIcon"  mr = "0 25px 0 0px" />
+                    Add to Card</button>
+            </Product.Footer>
+            <Div>
             <Product.Body>
                 <Product.P>
                    Category
@@ -47,11 +54,7 @@ const ProductCard = ()=>{
                     
                 </Div>
             </Product.Body>
-            <Product.Footer className = "footer">
-                <button className="add-to-cart-btn" type = "button">
-                    <Icon.Cart color = "var(--cl-red)" w= "var(--icon-w18)" className = "AddIcon"  mr = "0 25px 0 0px" />
-                    Add to Card</button>
-            </Product.Footer>
+            </Div>
         </ProductSyled>
     )
 }

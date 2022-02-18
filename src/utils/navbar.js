@@ -9,4 +9,6 @@ export const navbar = [
     { id:4 , title: 'Cameras', path: '/cameras' , element : '</>' } ,
     { id:5 , title: 'Accessories', path: '/accessories' , element : '</>' } ,
 ];
+
+
  
