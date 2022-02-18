@@ -22,7 +22,7 @@ function App() {
       <Navbar/>
       
       <Routes>
-        
+      <Route path = '/' exact  element = {<Home/>}/>  
       <Route path = '/home' exact  element = {<Home/>}/>
       <Route path = '/hot-deals' exact  element = {<div>aloo</div>}/>
       <Route path = '/categories' exact  element = {<Home/>}/>
