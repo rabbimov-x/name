@@ -17,6 +17,7 @@ code {
 }
 
 :root {
+  --cl-button: #717174;
   --cl-red: #d10024;
   --cl-dark: #15161d;
   --cl-shop: #e4e7ed;
@@ -30,6 +31,7 @@ code {
   --cl-bg-addcard: #1e1f29; /* footerning p ni rangi */
   --cl-footer-p: #b9babc; /* footerning p ni rangi */
   /* ============  FONT SIZE  =============== */
+  --sizeop: 14px;
   --size10: 10px;
   --size12: 12px;
   --size14: 14px;
@@ -52,4 +54,74 @@ code {
   --font-family: '"Montserrat-Extra-light", sans-serif';
   --font-familyR: "Montserrat-Regular", sans-serif;
   --font-familyS: "Montserrat-Semi-bold", sans-serif;
+  /* ============= DISPLAY ================== */
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --sizeop: 14px;
+    --size10: 12px;
+    --size12: 14px;
+    --size14: 16px;
+    --size16: 20px;
+    --size18: 22px;
+    --size20: 24px;
+    --size24: 34px;
+    --size30: 38px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --sizeop: 14px;
+    --size10: 10px;
+    --size12: 12px;
+    --size14: 14px;
+    --size16: 14px;
+    --size18: 16px;
+    --size20: 18px;
+    --size24: 22px;
+    --size30: 28px;
+    /* ========== */
+    --icon-w18: 16px;
+    --icon-w14: 12px;
+    --icon-w12: 10px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --media: 1;
+    --sizeop: 12px;
+    --size10: 8px;
+    --size12: 10px;
+    --size14: 12px;
+    --size16: 12px;
+    --size18: 14px;
+    --size20: 16px;
+    --size24: 20px;
+    --size30: 24px;
+    /* ========== */
+    --icon-w18: 14px;
+    --icon-w14: 10px;
+    --icon-w12: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --media: 1;
+    --sizeop: 10px;
+    --size10: 6px;
+    --size12: 9px;
+    --size14: 10px;
+    --size16: 12px;
+    --size18: 14px;
+    --size20: 15px;
+    --size24: 16px;
+    --size30: 22px;
+    /* ========== */
+    --icon-w18: 14px;
+    --icon-w14: 10px;
+    --icon-w12: 8px;
+  }
 }

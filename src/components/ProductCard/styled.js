@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const ProductSyled = styled.div`
 width: 99%;
+max-width: 420px;
 height: auto;
 border: 1px solid var(--cl-line);
 box-shadow: 0 0 0 0 #e4e7ed, 0 0 0 1px #e4e7ed;
@@ -11,6 +12,8 @@ background-color: var(--cl-white);
 position: relative;
 transition: all 0.3s linear;
 margin: 15px 0  ;
+margin-left: auto;
+margin-right: auto;
 
 &:hover{
     border: 1px solid var(--cl-red);
@@ -28,10 +31,10 @@ export const Product = styled.div`
 `
 Product.Footer = styled.div`
 position: absolute;
-bottom: 0;
-left: 0;
+bottom: 1px;
+left: 0.5%;
 z-index: 0;
-width: 100%;
+width: 99%;
 height: auto;
 padding: var(--mp15);
 background-color: var(--cl-bg-addcard);
@@ -42,6 +45,7 @@ transition: all 0.3s linear;
 &> .add-to-cart-btn{
     position: relative;
     display: flex;
+    cursor: pointer;
     align-items: center;
     border: 2px solid var(--cl-red);
     outline: none;
@@ -72,14 +76,21 @@ transition: all 0.3s linear;
 
 Product.Img = styled.div`
 display: flex;
+overflow-y: hidden;
+padding: 5px;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: calc(100vw/5);
+height: calc(150px + (100vw/10));
 background-color: var(--cl-white);
 box-sizing: border-box;
 &> img{
     width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    height: calc(250px + (100vw/10));
 }
 `
 Product.Body = styled.div`
@@ -133,6 +144,7 @@ Product.Btn = styled.div`
     width: 40px;
     height: 40px;
     background: transparent;
+    cursor: pointer;
     margin: 0 5px;
     display: flex;
     border-radius: 50%;

@@ -26,6 +26,10 @@ export const Ul = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 767px) {
+        padding-bottom: 30px;
+    }
 `
 
 Ul.H = styled.h1`

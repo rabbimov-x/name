@@ -13,6 +13,7 @@ import {ReactComponent as svg12} from './icons/next.svg'
 import {ReactComponent as svg13} from './icons/star_16_6.svg'
 import {ReactComponent as svg14} from './icons/exchange.svg'
 import {ReactComponent as svg15} from './icons/view.svg'
+import {ReactComponent as svg16} from './icons/navigation.svg'
 
 
 
@@ -136,12 +137,19 @@ text-transform: none;
 `
 
 export const Container = styled.div`
-display: flex;
+display: ${({display})=>display ? display : "flex"};
 flex-direction: ${({flex})=> flex? "column" : "none"};
 flex-wrap: ${({nowrap})=> nowrap? "nowrap" : "wrap"};
 justify-content: ${({justify})=>justify? justify: "left" };
 align-items: ${({align})=>align? "center": "" };
 padding: ${({pd})=>pd? pd : "0"} 5%;
+
+@media (max-width: 767px) {
+    .ulCard{
+        display: none;
+    }
+}
+
 `
 export const Col12 = styled.div`    
       width: 100%;
@@ -156,15 +164,35 @@ export const Col10 = styled(Col12)`
 `
 export const Col8 = styled(Col12)`
     width: 66.666%;
+    @media (max-width: 956px) {
+        width: 100%;
+    }
 `
 export const Col6 = styled(Col12)`
     width: 50%;
 `
 export const Col4 = styled(Col12)`
     width: 33.333%;
+    @media (max-width: 757px) {
+        width: 50%;
+    }
+    @media (max-width: 576px) {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
 `
 export const Col3  = styled(Col12)`
     width: 25%;
+    @media (max-width: 757px) {
+        width: 33.333%;
+    }
+    @media (max-width: 576px) {
+        width: 50%;
+        margin: 0 auto;
+        padding : 0 auto ;
+    }
+    
 `
 export const Div = styled.div`
 display: ${({display})=>display ? display : "block"};
@@ -180,6 +208,7 @@ position: ${({position})=>position? position : `relative`};
 
 export const LinkA = styled.a`
 text-decoration: none;
+cursor: pointer;
 color: var(--cl-white);
 font-family: var(--font-familyR);
 font-size: var(--size12);
@@ -258,5 +287,9 @@ Icon.Exchange = styled (svg14)`
 ${common}
 `
 Icon.View = styled (svg15)`
+${common}
+`
+
+Icon.Navigation = styled (svg16)`
 ${common}
 `

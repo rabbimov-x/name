@@ -8,10 +8,49 @@ padding: ${({pd})=>pd? pd : "0"};
 `
 export const LightHeader = styled(HeaderStyle)`
 background-color: var(--cl-bg-addcard);
+@media (max-width: 635px) {
+    .top-links{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+}
+@media (max-width: 470px) {
+    .top-links{
+        display: none;
+    }
+}
 `
 
 export const DarkHeader = styled(HeaderStyle)`
 background-color: var(--cl-dark);
+@media (max-width: 956px) {
+      .yuorCart{
+           display : none;
+        }
+        .searchCol{
+            width: 65%;
+            margin-left: auto;
+        }
+      
+    }
+    .searchCol{
+   @media (max-width: 767px) {
+       width: 100%;
+       padding: 15px;
+   }
+   @media (max-width: 576px) {
+       width: 100%;
+       padding: 0px;
+   }
+}
+.Logo{
+    @media (max-width: 767px) {
+       margin: 0 auto;
+       padding-top: 15px;
+   }      
+        }  
 
 `
 export const Count = styled.div`
@@ -53,13 +92,20 @@ overflow-x: hidden;
 DivIn.Sellect = styled.select`
 ${divin}
 width:  30%;
+height: auto;
 outline: none;
 border: 0;
 
+
+font-size: var(--sizeop);
 border-radius: 40px 0 0 40px ;
 border-right: 2px solid var(--cl-line) ;
 background-color: var(--cl-white);
 padding: 11px 0 11px 10px; 
+
+@media (min-width: 1440px) {
+    padding: 12px 0 12px 15px;
+}
 &::-ms-expand{
     display: none;
 }
@@ -72,6 +118,9 @@ padding: none;
 padding-left: 15px;
 outline: none;
 background-color: var(--cl-white);
+@media (max-width: 576px) {
+    width: 50%;
+}
 `
 DivIn.Button = styled.button`
 ${divin}
@@ -82,6 +131,8 @@ font-family : var(--font-familyR);
 color: var(--cl-white);
 background-color: var(--cl-red);
 border-radius: 0 40px 40px 0;
+
+
 `
 
 

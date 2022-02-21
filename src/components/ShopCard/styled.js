@@ -10,9 +10,18 @@ align-items: center;
 justify-content: center;
 overflow: hidden;
 padding:  0;
-margin:  0 0  100px 0;
+margin:  0 0  calc(100vw/17) 0;
 background-color: var(--cl-shop);
 position: relative;
+
+@media (max-width: 767px) {
+    width: 100%;
+    height: calc(147vw/6);
+}
+@media (max-width: 576px) {
+    width: 100%;
+    height: calc(147vw/4);
+}
 
 
 &::after{
@@ -20,8 +29,8 @@ position: relative;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -29%;
-    width: 80%;
+    left: -40%;
+    width: 102%;
     background: #D10024;
     opacity: 0.9;
     -webkit-transform: skewX(-45deg);
@@ -46,8 +55,19 @@ export const ShopTitle = styled.div`
     top: 0;
     left: 0;
     width: 75%;
-    padding: 30px;
+    padding: calc( 10px + 100vw/60);
     z-index: 10;
+
+    @media (max-width: 992px) {
+        padding: 10px calc( 10px + 100vw/60);
+    }
+    @media (max-width: 767px) {
+        padding: calc( 10px + 100vw/40);
+    }
+        
+    @media (max-width: 576px) {
+        padding: calc( 20px + 100vw/40);
+    }
 
     & > h1{
         width: 70%;

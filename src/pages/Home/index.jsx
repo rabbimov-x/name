@@ -1,35 +1,82 @@
 import React  from "react";
 import Footer from "../../components/Footer";
+import Slider from "react-slick";
 import ShopCard from "../../components/ShopCard"
 import ProductCard from "../../components/ProductCard"  
 import SmoleCard from "../../components/SmoleCard";
+import "slick-carousel/slick/slick.css";  
+import "slick-carousel/slick/slick-theme.css";
 import {Ul} from "../../components/Navbar/style";
 import {Col3, Col4, Container, Div, H1, LinkA} from "../../GlobalStyle"
 import {HomeStyle, Advert} from "./style"
 import { useSelector  } from "react-redux";
-
 const Home = ()=>{
+      
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 600,
+    autoplaySpeed: 2500,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint:1920,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint:1320,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint:890,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint:600,
+        settings: {
+          slidesToShow: 1,
+        },
+        state: {
+          display: true,
+          width: 100
+        }
+      }
+
+    ]
+  };
 
     const state = useSelector ((state)=>state.home)
     return(
         <HomeStyle>
-          <Container pd = "50px">
+          <Container  pd = "50px">
+           
             {
               state.shopCard.slice(-3).map(( value )=>{
                 return(
-                  <Col4 key = {value.id}>
+                  <Col4  className="124" key = {value.id}>
                     <ShopCard data={value} />
                   </Col4>
                 )
               })
             }
+            
+            
           </Container>
-          <Container justify = "space-between" mr = "15px  0 30px 0" nowrap  align>
+          <Container justify = "space-between" mr = "15px  0 30px 0"   align>
             <H1 mr = "auto 15px">
               New Products
             </H1>
-            <Div w = "40%">
-            <Ul>
+            <Div w = "auto">
+            <Ul className="ulCard">
               <Ul.Li>
                 <LinkA className = "activeNav"  color = "var(--cl-grey-p)" bold>
                   Laptops
@@ -54,17 +101,19 @@ const Home = ()=>{
             </Div>
 
           </Container>
-          <Container pd = " 0 5% 40px ">
+          <Container display = "block" pd = " 0 5% 40px ">
+            <Slider {...settings}>
              {
-               state.productCard.slice(-4).map((value)=>{
+               state.productCard.slice(-6).map((value)=>{
                  return(
-                   <Col3 key = {value.id}>
+                   <Col3 pd = " 0  var(--mp15) 60px var(--mp15)" key = {value.id}>
                       <ProductCard data = {value}>
                       </ProductCard>
                    </Col3>
                  )
                })
              }
+             </Slider>
           </Container>
           <Advert>
             <Container pd = "50px 5% 0" mr = "30px 0 0 0" >
@@ -103,12 +152,12 @@ const Home = ()=>{
 
             </Container>
           </Advert>
-          <Container justify = "space-between" mr = "15px  0 30px 0" nowrap  align>
+          <Container justify = "space-between" mr = "15px  0 30px 0"   align>
             <H1 mr = "auto 15px">
               Top Selling
             </H1>
-            <Div w = "40%">
-            <Ul>
+            <Div w = "auto">
+            <Ul className="ulCard">
               <Ul.Li>
                 <LinkA className = "activeNav"  color = "var(--cl-grey-p)" bold>
                   Laptops
@@ -133,17 +182,19 @@ const Home = ()=>{
             </Div>
 
           </Container>
-          <Container>
-             {
-               state.productCard.slice(-4).map((value)=>{
-                 return(
-                   <Col3 key = {value.id}>
-                      <ProductCard data = {value}>
-                      </ProductCard>
-                   </Col3>
-                 )
-               })
-             }
+          <Container display = "block">
+              <Slider {...settings}>
+                {
+                  state.productCard.slice(-6).map((value)=>{
+                    return(
+                      <Col3 pd = " 0  var(--mp15) 60px var(--mp15)" key = {value.id}>
+                          <ProductCard data = {value}>
+                          </ProductCard>
+                      </Col3>
+                    )
+                  })
+                }
+                </Slider>
           </Container>
           <Container justify = "space-between" pd = "100px  5% 100px " >
           {
