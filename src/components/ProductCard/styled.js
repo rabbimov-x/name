@@ -111,7 +111,7 @@ color: var(--cl-grey-p);
 margin: ${({mr})=>mr ? mr: " 14px 0"};
 `
 Product.A = styled.a`
-font-size: var(--size14);
+font-size: ${({size})=> size ? size : "var(--size14)"} ;
 font-family: var(--font-familyS);
 font-weight: 700;
 color: var(--cl-navlink);

@@ -13,7 +13,7 @@ const ProductCard = (props)=>{
             </Product.Img>
             
             <Product.Footer className = "footer">
-                <button onClick={()=>dispatch({type: addcart , id: props.data.id})}  className="add-to-cart-btn" type = "button">
+                <button onClick={()=>dispatch({type: addcart , id: props.data.id , addCart: true , soni: props.data.soni + 1 ,cost: props.data.cost }) }  className="add-to-cart-btn" type = "button">
                     <Icon.Cart color = "var(--cl-red)" w= "var(--icon-w18)" className = "AddIcon"  mr = "0 25px 0 0px" />
                     Add to Card</button>
             </Product.Footer>
@@ -26,9 +26,9 @@ const ProductCard = (props)=>{
                 product name goes here
                 </Product.A>
                 <Product.H4>
-                  $980.00 
+                  {"$" + props.data.cost}
                   <del>
-                      $990.00
+                      {"$" + props.data.oldcost}
                   </del>
                 </Product.H4>
                 <Div display = "flex" justify = "center" align = "center" mr = "15px 0" >

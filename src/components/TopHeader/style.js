@@ -8,6 +8,9 @@ padding: ${({pd})=>pd? pd : "0"};
 `
 export const LightHeader = styled(HeaderStyle)`
 background-color: var(--cl-bg-addcard);
+.top-link{
+    position: relative;
+}
 @media (max-width: 635px) {
     .top-links{
         width: 100%;
@@ -59,33 +62,56 @@ background-color: var(--cl-dark);
 `
 export const AddCart = styled.div`
     position: absolute;
+    display: block;
     width: 300px;
     background: #FFF;
-    padding: 15px;
     box-shadow: 0px 0px 0px 2px #e4e7ed;
     z-index: 99;
     right: 0;
+    top: 55px;
 
-    .line{
+    @media(max-width: 992px) {
+        display: none;
+    }
+    
+    .CardAll{
         width: 100%;
+        max-height: 180px;
+        overflow-y: scroll;
+    }
+    .line{
+        width: 90%;
         height: 2px;
         background-color: var(--cl-line);
+        margin: 0 15px 0;
     }
 `
 AddCart.Card  = styled.div`
     width: 100%;
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: relative;
 
-    .xicon{
+    & .xicon{
         position: absolute;
         width: 14px;
         height: 14px;
-        left:0;
-        right:0;
-        background-color: var(--cl-black);
+        left:-8px;
+        padding: 1px;
+        top:0px;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cl-dark-grey);
+        &> svg{
+            width: 70%;
+            font-weight: 700;
+        }
     }
-    .img{
+    & .img{
         width: 40px;
         height: 40px;
         margin-right: 30px;
@@ -97,22 +123,18 @@ AddCart.Card  = styled.div`
     
 `
 AddCart.Buttonright = styled.div`
-    display: inline-block;
     width: 50%;
-    /* position: absolute; */
     display: flex;
     align-items: center;
-    bottom: 0;
-    left: 0;
+    justify-content: center;
     padding: 12px;
     background-color: var(--cl-dark-grey);
     color: var(--cl-white);
-    text-align: center;
     font-weight: 700;
     font-size : var(--size18);
 `
 
-AddCart.Buttonleft = styled(AddCart.Card)`
+AddCart.Buttonleft = styled(AddCart.Buttonright)`
     background-color: var(--cl-red);
     bottom: 0;
     right: 0;
