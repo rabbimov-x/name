@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-import { homeReduser } from "./homeReduser";
+import { AddCard, homeReduser } from "./homeReduser";
  
 
 
 
 export const  Rootreduser = combineReducers({
    home: homeReduser,
+   addCard: AddCard,
 })

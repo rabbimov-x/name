@@ -71,8 +71,7 @@ const TopHeader = ()=>{
                             <Count top = "-10px" right = "4px">2</Count>
                             <p>Your Wishlist</p>
                         </Div>
-
-
+                        
                         </LinkA>
                     </Div>
                     </Col3>

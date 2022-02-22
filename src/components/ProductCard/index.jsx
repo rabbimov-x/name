@@ -1,9 +1,11 @@
 import React from "react";
+import { addcart } from "../../redux/type/types";
 import { Div, Icon } from "../../GlobalStyle"
 import {ProductSyled, Product} from "./styled"
+import { useDispatch } from "react-redux";
 
 const ProductCard = (props)=>{
-    // console.log(props.data.imgUrl)
+    const dispatch = useDispatch()
     return(
         <ProductSyled>
             <Product.Img>
@@ -11,7 +13,7 @@ const ProductCard = (props)=>{
             </Product.Img>
             
             <Product.Footer className = "footer">
-                <button className="add-to-cart-btn" type = "button">
+                <button onClick={()=>dispatch({type: addcart , id: props.data.id})}  className="add-to-cart-btn" type = "button">
                     <Icon.Cart color = "var(--cl-red)" w= "var(--icon-w18)" className = "AddIcon"  mr = "0 25px 0 0px" />
                     Add to Card</button>
             </Product.Footer>
