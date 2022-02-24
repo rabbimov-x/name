@@ -14,6 +14,11 @@ import {ReactComponent as svg13} from './icons/star_16_6.svg'
 import {ReactComponent as svg14} from './icons/exchange.svg'
 import {ReactComponent as svg15} from './icons/view.svg'
 import {ReactComponent as svg16} from './icons/navigation.svg'
+import {ReactComponent as svg17} from './icons/unhappy.svg'
+import {ReactComponent as svg18} from './icons/visa.svg'
+import {ReactComponent as svg19} from './icons/Paypal.svg'
+import {ReactComponent as svg20} from './icons/Western-union.svg'
+// import {ReactComponent as svg21} from './icons/unhappy.svg'
 
 
 
@@ -137,6 +142,7 @@ text-transform: none;
 `
 
 export const Container = styled.div`
+width: 100%;
 display: ${({display})=>display ? display : "flex"};
 flex-direction: ${({flex})=> flex? "column" : "none"};
 flex-wrap: ${({nowrap})=> nowrap? "nowrap" : "wrap"};
@@ -209,7 +215,6 @@ position: ${({position})=>position? position : `relative`};
 export const LinkA = styled.a`
 text-decoration: none;
 cursor: pointer;
-color: var(--cl-white);
 font-family: var(--font-familyR);
 font-size: var(--size12);
 font-weight: ${({bold})=> bold ? "600" : "500"};
@@ -293,3 +298,17 @@ ${common}
 Icon.Navigation = styled (svg16)`
 ${common}
 `
+
+Icon.Unhappy = styled (svg17)`
+${common}
+`
+
+Icon.Visa = styled (svg18)`
+${common}
+`
+Icon.Paypal = styled (svg19)`
+${common}
+`
+
+Icon.Western = styled (svg20)`
+${common}`

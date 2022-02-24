@@ -1,4 +1,5 @@
 import React , {useEffect} from "react";
+// import { compose } from "redux";
 import {Product} from "../ProductCard/styled"
 import { updateState, deleteCt } from "../../redux/type/types";
 import {Col6,Col3, Container,Div,Icon,LinkA, P, H1} from "../../GlobalStyle"
@@ -8,7 +9,7 @@ const TopHeader = ()=>{
 
     const state = useSelector((state)=>state )
     const dispatch = useDispatch()
-    console.log(state.top.summa)
+    // console.log(state.top.summa)
     useEffect(()=>{
         
     },[state.cart])
@@ -41,7 +42,7 @@ const TopHeader = ()=>{
                         
                         <LinkA href="/cart" >
                             <Icon.Human color = " var(--cl-red)" mr = "0 10px 0 0" />
-                            Yuor Cart                     
+                            Your Cart                     
                         </LinkA>
                         
                         
@@ -65,10 +66,10 @@ const TopHeader = ()=>{
                             <DivIn.Button    type = "sumbit">Searche</DivIn.Button>
                         </DivIn>
                     </Col6>
-                    <Col3 className="yuorCart"   align = "center" pd = "5px">
+                    <Col3    align = "center" pd = "5px">
                     <Div  display = "flex" justify = "end" align = "center">
-                        <LinkA mr= "0 15px" className="yuorLink">
-                        <Div display = "flex" justify = "center" align = "center" flex = "column" >
+                        <LinkA mr= "0 15px" className=" yourlink yourCart">
+                        <Div className="iconvstitle" display = "flex" justify = "center" align = "center" flex = "column" >
                             <Icon.Like w = "18px" >
                             </Icon.Like>
                             <Count top = "-10px" right = "4px">2</Count>
@@ -77,17 +78,15 @@ const TopHeader = ()=>{
 
 
                         </LinkA>
-                        <LinkA mr= "0 15px" onClick={()=>dispatch({type: updateState , yuorCart: !state.home.yuorCart })} className="yuorLink">
-                        <Div display = "flex" justify = "center" align = "center" flex = "column" >
+                        <button mr= "0 15px" type="button" onClick={()=>dispatch({type: updateState , yourCart: !state.home.yourCart })}  className="yourCart yourlink">
+                     <Div className="iconvstitle" display = "flex" justify = "center" align = "center" flex = "column" >
                             <Icon.Cart w = "18px" >
                             </Icon.Cart>
                             <Count top = "-10px" right = "4px">2</Count>
                             <p>Your Wishlist</p>
                         </Div>
                         
-                        </LinkA>
-                        {
-                            state.home.yuorCart?<AddCart>
+                           <AddCart className="addCardYour">
                             <Div className="CardAll" pd = "15px">
                                 {           
 
@@ -131,7 +130,7 @@ const TopHeader = ()=>{
                             </Div>
                             <Div display = "flex">
                                 <AddCart.Buttonright>
-                                        Chekaut 
+                                        Checkout 
                                 </AddCart.Buttonright>
                                 <AddCart.Buttonleft>
                                     Weiv Cart 
@@ -139,8 +138,10 @@ const TopHeader = ()=>{
                                 </AddCart.Buttonleft>
                             </Div>
                         </AddCart>
-                        : "" 
-                        }
+                        
+                        
+                        </button>
+                        
                         
                     </Div>
                     </Col3>

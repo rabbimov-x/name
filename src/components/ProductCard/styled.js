@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 export const ProductSyled = styled.div`
 width: 99%;
 max-width: 420px;
@@ -11,7 +10,7 @@ box-shadow: 0 0 0 0 #e4e7ed, 0 0 0 1px #e4e7ed;
 background-color: var(--cl-white);
 position: relative;
 transition: all 0.3s linear;
-margin: 15px 0  ;
+margin: 15px 0  60px 0 ;
 margin-left: auto;
 margin-right: auto;
 
@@ -78,6 +77,7 @@ Product.Img = styled.div`
 display: flex;
 overflow-y: hidden;
 padding: 5px;
+
 align-items: center;
 justify-content: center;
 width: 100%;
@@ -86,8 +86,13 @@ background-color: var(--cl-white);
 box-sizing: border-box;
 &> img{
     width: 100%;
+    height: auto;
+    @media (max-width: 1200px) {
     height: 100%;
 }
+}
+
+
 
 @media (max-width: 600px) {
     height: calc(250px + (100vw/10));

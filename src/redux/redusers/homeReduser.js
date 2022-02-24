@@ -13,12 +13,13 @@ const initialState = {
     footer: footer,
     buttonClick: true,
     cart: true,
-    yuorCart: false,
+    yourCart: false,
+    yourCartNumber: 0,
 }
 
 export const homeReduser = (state = initialState, action)=>{
     if(action.type === updateState){
-        console.log(action)
+        // console.log(action)
         state.buttonClick = !state.buttonClick
         return {...state , ...action};
     } else  if(action.type === addcart || action.type === deleteCt){

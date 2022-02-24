@@ -28,12 +28,40 @@ background-color: var(--cl-bg-addcard);
 
 export const DarkHeader = styled(HeaderStyle)`
 background-color: var(--cl-dark);
-.yuorCart{
-           position: relative;
+.yourCart{
+            position: relative;
+            color: var(--cl-white);
+            font-family: var(--font-familyR);
+            font-size: var(--size12);
+            background-color: transparent;
+            border: none;
+            outline: none;
 
+            font-weight: ${({bold})=> bold ? "600" : "500"};
+            
+            /* &:hover{
+                color: var(--cl-red);
+               &> .iconvstitle{
+                svg{
+                    path{
+                        fill:red;
+                    }
+                }
+               }
+            } */
+            .addCardYour{
+                display: none;
+            }
+            &:focus{
+               
+                
+            .addCardYour{
+                display: block;
+            }
+            }
         }
 @media (max-width: 956px) {
-      .yuorCart{
+      .yourCart{
            display : none;
         }
         .searchCol{

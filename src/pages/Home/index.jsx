@@ -1,5 +1,4 @@
 import React  from "react";
-import Footer from "../../components/Footer";
 import Slider from "react-slick";
 import ShopCard from "../../components/ShopCard"
 import ProductCard from "../../components/ProductCard"  
@@ -218,9 +217,6 @@ const Home = ()=>{
                })
              }
           </Container>
-          <Footer data = {state.footer} >
-
-          </Footer>
 
         </HomeStyle>
 
