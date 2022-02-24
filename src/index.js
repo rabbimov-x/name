@@ -6,8 +6,8 @@ import thunk from "redux-thunk"
 import React from 'react';
 import App from './App';
 import './index.css'
-
-const store  = createStore(Rootreduser, compose( applyMiddleware(thunk) ,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
+// ,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store  = createStore(Rootreduser, compose( applyMiddleware(thunk) ))
 
 ReactDOM.render(
   <React.StrictMode>
